@@ -1,113 +1,30 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff">
-  <title>الدفع إلى جذع AI</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f6f8fc"><meta name="description" content="صفحة دفع إلكترونية آمنة.">
+<title>إتمام الدفع</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="topbar">
-    <a class="merchant-brand" href="#" aria-label="جذع AI">
-      <span class="brand-symbol">ج</span>
-      <span class="brand-title">جذع AI</span>
-    </a>
-    <div class="topbar-secure"><span class="secure-icon">⌑</span> اتصال آمن</div>
-  </header>
-
-  <main class="checkout-layout">
-    <section class="payment-panel">
-      <div class="mobile-merchant">
-        <span class="brand-symbol">ج</span>
-        <strong>جذع AI</strong>
-      </div>
-
-      <div class="section-heading">
-        <h1>إتمام عملية الدفع</h1>
-        <p>أدخل المبلغ الذي ترغب في دفعه إلى جذع AI.</p>
-      </div>
-
-      <form id="payment-form" novalidate>
-        <div class="field-group">
-          <label for="amount">المبلغ</label>
-          <div class="amount-field">
-            <input id="amount" type="number" inputmode="decimal" min="1" step="0.01" placeholder="0.00" required>
-            <select id="currency" aria-label="العملة">
-              <option value="SAR">ر.س</option>
-              <option value="USD">USD</option>
-            </select>
-          </div>
-          <small>أدخل المبلغ المراد دفعه.</small>
-        </div>
-
-        <div class="payment-method-heading">
-          <h2>طريقة الدفع</h2>
-          <span>تُعرض الطرق المتاحة بعد المتابعة</span>
-        </div>
-
-        <div class="method-placeholder">
-          <span class="card-icon">▰</span>
-          <div>
-            <strong>بطاقة ائتمانية أو مدى</strong>
-            <small>Visa · Mastercard · Mada (حسب دعم بوابة الدفع)</small>
-          </div>
-          <span class="radio-dot"></span>
-        </div>
-
-        <button type="submit" id="pay-button">
-          <span id="button-label">متابعة</span>
-          <span class="button-arrow">←</span>
-        </button>
-        <p id="message" class="message" role="status" aria-live="polite"></p>
-      </form>
-
-      <div class="legal">
-        بالمتابعة، أنت توافق على شروط وأحكام التاجر وسياسة الخصوصية.
-      </div>
-    </section>
-
-    <aside class="summary-panel">
-      <div class="summary-inner">
-        <div class="summary-brand">
-          <span class="brand-symbol">ج</span>
-          <div>
-            <strong>جذع AI</strong>
-            <small>حلول تقنية ذكية لأعمالك</small>
-          </div>
-        </div>
-
-        <div class="summary-divider"></div>
-
-        <div class="product-description">
-          <span class="product-kicker">دفعة إلى</span>
-          <h2>جذع AI</h2>
-          <p>دفعة مقابل الخدمات والمنتجات التقنية.</p>
-        </div>
-
-        <div class="summary-divider"></div>
-
-        <div class="total-row">
-          <span>المبلغ الإجمالي</span>
-          <strong id="total">0.00 ر.س</strong>
-        </div>
-        <div class="summary-footnote">سيتم تأكيد المبلغ النهائي قبل إتمام الدفع لدى مزود الخدمة.</div>
-      </div>
-      <div class="summary-bottom">
-        <span>الدفع الآمن</span>
-        <span class="lock">▣</span>
-      </div>
-    </aside>
-  </main>
-
-  <footer class="page-footer">
-    <span>© جذع AI</span>
-    <a href="#" id="privacy">الخصوصية</a>
-    <a href="#" id="terms">الشروط</a>
-  </footer>
-  <script src="app.js"></script>
-</body>
-</html>
+<header class="topbar"><a class="merchant-brand" href="#" aria-label="العودة إلى المتجر"><span class="merchant-mark" id="merchant-mark" aria-hidden="true">م</span><span class="merchant-name" id="merchant-name">اسم التاجر</span></a><div class="secure-label"><span class="secure-symbol" aria-hidden="true">▣</span><span>دفع آمن</span></div></header>
+<main class="checkout-shell">
+<section class="checkout-main" aria-labelledby="checkout-title">
+<div class="mobile-merchant" aria-hidden="true"><span class="merchant-mark" id="mobile-merchant-mark">م</span><strong id="mobile-merchant-name">اسم التاجر</strong></div>
+<div class="heading"><p class="eyebrow">إتمام عملية الشراء</p><h1 id="checkout-title">أكمل عملية الدفع</h1><p class="heading-description">أدخل المبلغ المطلوب، ثم تابع لإكمال عملية الدفع بأمان.</p></div>
+<form id="payment-form" novalidate>
+<div class="field"><label for="amount">المبلغ</label><div class="amount-control"><input id="amount" name="amount" type="number" inputmode="decimal" min="1" step="0.01" placeholder="0.00" autocomplete="off" required><select id="currency" name="currency" aria-label="اختر العملة"><option value="SAR">ر.س</option><option value="USD">USD</option></select></div><p class="field-hint">أدخل المبلغ الذي تريد دفعه.</p></div>
+<div class="divider"></div>
+<div class="payment-section"><div class="section-title-row"><h2>طريقة الدفع</h2><span class="secure-caption">تشفير آمن</span></div><div class="payment-method" aria-label="الدفع باستخدام بطاقة"><span class="card-symbol" aria-hidden="true">▰</span><span class="method-copy"><strong>بطاقة بنكية</strong><small>Visa · Mastercard · مدى</small></span><span class="selected-indicator" aria-hidden="true"></span></div><p class="method-note">ستظهر وسائل الدفع المتاحة وفق إعدادات مزود خدمة الدفع.</p></div>
+<button type="submit" id="pay-button"><span id="button-label">متابعة إلى الدفع</span><span class="button-arrow" aria-hidden="true">←</span></button><p id="message" class="message" role="status" aria-live="polite"></p>
+</form><p class="terms-note">بالمتابعة، فإنك توافق على شروط التاجر وسياسة الخصوصية.</p>
+</section>
+<aside class="order-panel" aria-label="ملخص الدفع"><div class="order-content">
+<div class="order-merchant"><span class="merchant-mark" id="summary-merchant-mark">م</span><div><strong id="summary-merchant-name">اسم التاجر</strong><small>ملخص عملية الدفع</small></div></div>
+<div class="summary-rule"></div><div class="order-description"><span class="summary-label">تفاصيل الدفع</span><h2 id="summary-title">دفعة إلى اسم التاجر</h2><p id="summary-description">المبلغ الذي أدخلته لإتمام عملية الدفع.</p></div>
+<div class="summary-rule"></div><div class="total-line"><span>الإجمالي المستحق</span><strong id="total" dir="ltr">0.00 ر.س</strong></div><p class="total-note">سيتم اعتماد المبلغ النهائي في صفحة الدفع الآمنة.</p>
+</div><div class="order-footer"><span>معاملة محمية</span><span class="lock-symbol" aria-hidden="true">▣</span></div></aside>
+</main>
+<footer class="page-footer"><span>صفحة دفع آمنة</span><a href="#" id="privacy">الخصوصية</a><a href="#" id="terms">الشروط</a></footer>
+<script src="app.js"></script>
+</body></html>
